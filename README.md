@@ -1,25 +1,22 @@
-# Iris Classification API
+# Iris Classifier API
 
-## Problem
-Classify iris flowers (Setosa, Versicolor, Virginica) from 4 numeric features:
-sepal_length, sepal_width, petal_length, petal_width.
+A **FastAPI-based web service** for predicting iris flower species (`setosa`, `versicolor`, `virginica`) using four input features:  
+- Sepal length  
+- Sepal width  
+- Petal length  
+- Petal width  
 
-## Model
-- Algorithm: RandomForestClassifier
-- Dataset: scikit-learn built-in Iris
-- Metric: Accuracy on test split printed during training
-- Files saved: `model.pkl`, `target_names.pkl`, `feature_names.pkl`
+The model is powered by a **RandomForestClassifier**, trained on the classic Iris dataset.
 
-## Endpoints
-- `GET /` — Health check
-- `POST /predict` — Predict species, returns `prediction` and `confidence`
-- `GET /model-info` — Model metadata (type, features, classes)
+---
 
-## Example Request
-```json
-{
-  "sepal_length": 5.1,
-  "sepal_width": 3.5,
-  "petal_length": 1.4,
-  "petal_width": 0.2
-}
+## Features
+- **Health Check Endpoint** – Ensure the API is running.  
+- **Prediction Endpoint** – Get predicted iris species and confidence score.  
+- **Model Info Endpoint** – Retrieve details about the model, input features, and target classes.  
+
+---
+
+## Project Structure
+
+
